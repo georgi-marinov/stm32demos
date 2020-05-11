@@ -42,8 +42,8 @@ bm_blink_led.bin \
 all: bm_blink_led.elf secondary-outputs
 
 # Tool invocations
-bm_blink_led.elf: $(OBJS) $(USER_OBJS) D:\Projects\Devices\F070_Dev\Firmwares\bm_blink_led\STM32F070F6PX_FLASH.ld
-	arm-none-eabi-gcc -o "bm_blink_led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"D:\Projects\Devices\F070_Dev\Firmwares\bm_blink_led\STM32F070F6PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bm_blink_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+bm_blink_led.elf: $(OBJS) $(USER_OBJS) D:\Projects\STMDemos\github\STM32F070\bm_blink_led\STM32F070F6PX_FLASH.ld
+	arm-none-eabi-gcc -o "bm_blink_led.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"D:\Projects\STMDemos\github\STM32F070\bm_blink_led\STM32F070F6PX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bm_blink_led.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

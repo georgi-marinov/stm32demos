@@ -5,7 +5,7 @@
 #define RCC_CFGR_PLLMULX (((48UL / HSE_MHZ_VALUE) - 2UL) << 18)
 
 // Defines blink rate interval
-#define BLINK_INTERVAL 150
+#define BLINK_INTERVAL 100
 
 // Keep elapsed millis
 volatile uint32_t Millis = 0;
